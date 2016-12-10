@@ -8,6 +8,8 @@ namespace CaelumEstoque.DAO
 {
     public class ProdutosDAO
     {
+        public object Nome { get; internal set; }
+
         public void Adiciona(Produto produto)
         {
             using (var context = new EstoqueContext())
