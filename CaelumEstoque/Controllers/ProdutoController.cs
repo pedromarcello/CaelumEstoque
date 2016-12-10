@@ -22,6 +22,7 @@ namespace CaelumEstoque.Controllers
         {
             return View();
         }
+        [HttpPost]
         public ActionResult Adiciona(Produto produto)
         {
             
