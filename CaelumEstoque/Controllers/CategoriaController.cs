@@ -13,10 +13,20 @@ namespace CaelumEstoque.Controllers
         // GET: Categoria
         public ActionResult Index()
         {
-            CategoriasDAO dao = new CategoriasDAO();
-            IList<CategoriaDoProduto> categoria = dao.Lista();
-            ViewBag.Categoria = categoria;
-            return View();
+            if (ModelState.IsValid)
+            {
+                CategoriasDAO dao = new CategoriasDAO();
+                IList<CategoriaDoProduto> categoria = dao.Lista();
+                ViewBag.Categoria = categoria;
+                return View();
+            }
+            else
+            {
+                CategoriasDAO categoriasDAO = new CategoriasDAO();
+                IList<CategoriaDoProduto> categorias = categoriasDAO.Lista(); 
+                ViewBag.Categoria = categorias;
+                return View("Form");
+            }
         }
     }
 }

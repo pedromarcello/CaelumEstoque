@@ -12,21 +12,31 @@
 </head>
 <body>
     <div>
-        <form action="/Produto/Adciona">
+        <form action="/Produto/Adiciona" method="post">
             <label for="nome">Nome:</label>
-            <input id="nome" name="nome" />
+            <input id="nome" name="produto.Nome" value="@ViewBag.Produto.Nome" />
+            @Html.ValidationMessage("produto.Nome")
 
             <label for="preco">Preço:</label>
-            <input id="preco" name="preco" />
+            <input id="preco" name="produto.Preco" value="@ViewBag.Produto.Preco" />
+            @Html.ValidationMessage("produto.InformaticaComPrecoInvalido")
 
             <label for="quantidade">Quantidade:</label>
-            <input id="quantidade" name="quantidade" />
+            <input id="quantidade" name="produto.Quantidade" value="@ViewBag.Produto.Quantidade" />
+            @Html.ValidationMessage("produto.Quantidade")
 
             <label for="descricao">Descrição</label>
-            <input id="descricao" name="descricao" />
+            <input id="descricao" name="produto.Descricao" value="@ViewBag.Produto.Descricao" />
+            @Html.ValidationMessage("produto.Descricao")
 
             <label for="categoria">Categoria</label>
-            <input id="categoria" name="categoriaId" />
+            <select id="categoria" name="produto.CategoriaId" >
+                @foreach (var categoria in ViewBag.Categorias)
+                {
+                    <option value="@categoria.Id">@categoria.Nome</option>
+                }
+            </select>
+            @Html.ValidationMessage("produto.CategoriaId")
 
             <input type="submit" />
 
