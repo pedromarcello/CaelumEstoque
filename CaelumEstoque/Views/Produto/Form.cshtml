@@ -17,7 +17,7 @@
             <input id="nome" name="produto.Nome" value="@ViewBag.Produto.Nome" />
             @Html.ValidationMessage("produto.Nome")
 
-            <label for="preco">Preço:</label>
+            <label for="preco">Preco:</label>
             <input id="preco" name="produto.Preco" value="@ViewBag.Produto.Preco" />
             @Html.ValidationMessage("produto.InformaticaComPrecoInvalido")
 
@@ -25,23 +25,9 @@
             <input id="quantidade" name="produto.Quantidade" value="@ViewBag.Produto.Quantidade" />
             @Html.ValidationMessage("produto.Quantidade")
 
-            <label for="descricao">Descrição</label>
+            <label for="descricao">Descricao</label>
             <input id="descricao" name="produto.Descricao" value="@ViewBag.Produto.Descricao" />
             @Html.ValidationMessage("produto.Descricao")
-
-            <label for="categoria">Categoria</label>
-            <select id="categoria" name="produto.CategoriaId" >
-=======
-            <input id="nome" name="produto.Nome" />
-
-            <label for="preco">Preço:</label>
-            <input id="preco" name="produto.Preco" />
-
-            <label for="quantidade">Quantidade:</label>
-            <input id="quantidade" name="produto.Quantidade" />
-
-            <label for="descricao">Descrição:</label>
-            <input id="descricao" name="produto.Descricao" />
 
             <label for="categoria">Categoria:</label>
             <select>

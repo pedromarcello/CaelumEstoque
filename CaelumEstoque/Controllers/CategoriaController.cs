@@ -23,12 +23,12 @@ namespace CaelumEstoque.Controllers
             else
             {
                 CategoriasDAO categoriasDAO = new CategoriasDAO();
-                IList<CategoriaDoProduto> categorias = categoriasDAO.Lista(); 
-                ViewBag.Categoria = categorias;
+                IList<CategoriaDoProduto> categoria = categoriasDAO.Lista(); 
+                ViewBag.Categoria = categoria;
                 return View("Form");
             }
-            CategoriasDAO dao = new CategoriasDAO();
-            IList<CategoriaDoProduto> categorias = dao.Lista();
+            CategoriasDAO cDao = new CategoriasDAO();
+            IList<CategoriaDoProduto> categorias = cDao.Lista();
             ViewBag.Categoria = categorias;
             return View();
         }
