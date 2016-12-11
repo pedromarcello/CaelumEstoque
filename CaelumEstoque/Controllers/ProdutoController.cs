@@ -1,4 +1,4 @@
-﻿using CaelumEstoque.DAO;
+using CaelumEstoque.DAO;
 using CaelumEstoque.Models;
 using System;
 using System.Collections.Generic;
@@ -50,3 +50,18 @@ namespace CaelumEstoque.Controllers
         }
     }
 }
+
+            CategoriasDAO dao = new CategoriasDAO();
+            IList<CategoriaDoProduto> categorias = dao.Lista();
+            ViewBag.Categorias = categorias;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Adiciona(Produto produto)
+        {
+            ProdutosDAO dao = new ProdutosDAO();
+            dao.Adiciona(produto);
+            return RedirectToAction("Index");
+        }
+    }
+}   

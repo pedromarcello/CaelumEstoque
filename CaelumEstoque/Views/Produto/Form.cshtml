@@ -1,4 +1,4 @@
-﻿
+
 @{
     Layout = null;
 }
@@ -31,15 +31,27 @@
 
             <label for="categoria">Categoria</label>
             <select id="categoria" name="produto.CategoriaId" >
+=======
+            <input id="nome" name="produto.Nome" />
+
+            <label for="preco">Preço:</label>
+            <input id="preco" name="produto.Preco" />
+
+            <label for="quantidade">Quantidade:</label>
+            <input id="quantidade" name="produto.Quantidade" />
+
+            <label for="descricao">Descrição:</label>
+            <input id="descricao" name="produto.Descricao" />
+
+            <label for="categoria">Categoria:</label>
+            <select>
                 @foreach (var categoria in ViewBag.Categorias)
                 {
                     <option value="@categoria.Id">@categoria.Nome</option>
                 }
             </select>
             @Html.ValidationMessage("produto.CategoriaId")
-
             <input type="submit" />
-
         </form>
     </div>
 </body>
