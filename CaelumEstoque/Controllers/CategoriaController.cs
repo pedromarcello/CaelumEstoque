@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +13,20 @@ namespace CaelumEstoque.Controllers
         // GET: Categoria
         public ActionResult Index()
         {
+            if (ModelState.IsValid)
+            {
+                CategoriasDAO dao = new CategoriasDAO();
+                IList<CategoriaDoProduto> categoria = dao.Lista();
+                ViewBag.Categoria = categoria;
+                return View();
+            }
+            else
+            {
+                CategoriasDAO categoriasDAO = new CategoriasDAO();
+                IList<CategoriaDoProduto> categorias = categoriasDAO.Lista(); 
+                ViewBag.Categoria = categorias;
+                return View("Form");
+            }
             CategoriasDAO dao = new CategoriasDAO();
             IList<CategoriaDoProduto> categorias = dao.Lista();
             ViewBag.Categoria = categorias;

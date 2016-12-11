@@ -1,4 +1,4 @@
-﻿
+
 @{
     Layout = null;
 }
@@ -12,6 +12,25 @@
 </head>
 <body>
     <div> 
+        <form action="/Produto/Adiciona" method="post">
+            <label for="nome">Nome:</label>
+            <input id="nome" name="produto.Nome" />
+
+            <label for="preco">Preço:</label>
+            <input id="preco" name="produto.Preco" />
+
+            <label for="quantidade">Quantidade:</label>
+            <input id="quantidade" name="produto.Quantidade" />
+
+            <label for="descricao">Descrição:</label>
+            <input id="descricao" name="produto.Descricao" />
+
+            <label for="categoria">Categoria:</label>
+            <input id="categoria" name="produto.CategoriaId" />
+
+            <input type="submit" />
+        </form>
+
         <h1>Produto adiciona com sucesso!!!</h1>
     </div>
 </body>
