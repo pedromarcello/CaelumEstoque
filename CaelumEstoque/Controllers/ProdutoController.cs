@@ -48,14 +48,12 @@ namespace CaelumEstoque.Controllers
                 return View("Form");
             }
         }
-        public ActionResult Visualiza(int produtoId)
+        public ActionResult Visualiza(int id)
         {
-            ProdutosDAO dao = new ProdutosDAO(); 
-            Produto produto= dao.BuscaPorId(produtoId);
-            ViewBag.Produtos = produto;
-            return View(produto);
-
-
+            ProdutosDAO dao = new ProdutosDAO();
+            Produto produto = dao.BuscaPorId(id);
+            ViewBag.Produto = produto;
+            return View();  
         }
     }
 }

@@ -1,26 +1,12 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
-<!DOCTYPE html>
+Id: @ViewBag.Produto.Id<br />
+Nome: @ViewBag.Produto.Nome<br />
+Quantidade: @ViewBag.Produto.Quantidade<br />
+Preço: @ViewBag.Produto.Preco<br />
+Descricao: @ViewBag.Produto.Descricao<br />
+Categoria: @ViewBag.Produto.Categoria.Nome<br />
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Visualiza</title>
-</head>
-<body>
-    <div>
-        <form>
-            Id: @ViewBag.Produto.Id<br />
-            Nome: @ViewBag.Produto.Nome<br />
-            Categoria: @ViewBag.Produto.Categoria.Nome<br />
-            Preço: @ViewBag.Produto.Preco<br />
-            Descrição: @ViewBag.Produto.Descricao<br />
-            Quantidade: @ViewBag.Produto.Quantidade<br />
-            @Html.ActionLink("Retorno para pagina inicial","Index")
-        </form>
-    </div>
-</body>
-</html>
+@Html.ActionLink("Voltar para a lista de produtos", "Index", "Produto")

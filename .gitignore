@@ -237,3 +237,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/CaelumEstoque/App_Data

@@ -3,35 +3,32 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Lista de produtos</title>
 </head>
 <body>
-    <div>
-        <table>
-            <thead>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome do Produto</th>
+                <th>Preco</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var produto in Model)
+            {
                 <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Quantidade</th>
+                    <td>@produto.Id</td>
+                    <td>
+                        @Html.ActionLink(produto.Nome, "Visualiza", new { id = produto.Id })
+                    </td>
+                    <td>@produto.Preco</td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var produto in Model)
-                {
-                    <tr>
-                        <td>@produto.Id</td>
-                        <td>@Html.ActionLink(produto.Nome, "Visualiza", new { id = produto.Id })</td>
-                        <td>@produto.Quantidade</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+            }
+        </tbody>
+    </table>
 </body>
 </html>
