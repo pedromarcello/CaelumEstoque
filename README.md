@@ -1,6 +1,6 @@
 # Stock - Storage Solutions 
 
-[![N|Solid](http://bipdp.com/wp-content/uploads/2014/09/aspnet-icon-PNG1.png)](https://www.asp.net/mvc)
+[![N|MicrosoftMVC](http://bipdp.com/wp-content/uploads/2014/09/aspnet-icon-PNG1.png)](https://www.asp.net/mvc)
 
 Stock é um serviço de acompanhamento de estocagem de produtos.
 
@@ -20,11 +20,11 @@ Stock, usa as seguintes tecnologias, no seu funcionamento:
 Todo o código é aberto ao público [repositório][dill]
  no GitHub.
 
-### Desenvolvimento 
+### Contribuições 
 
-Humm acha que o código precisa mudar ?. Contribua !!!
+Humm acha que o código precisa mudar ?Contribua!!!
 
-Clone o repositório, e após realizada a alteração, envie o Pull Request.
+Execute  o fork no repositório, e após realizada a alteração, envie-o.
 
 
 
