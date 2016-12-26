@@ -30,7 +30,7 @@
         <select id="categoria" name="produto.CategoriaId">
             @foreach (var categoria in ViewBag.Categorias)
             {
-                <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produto.CategoriaId)">
+                <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Categorias.CategoriaId)">
                     @categoria.Nome
                 </option>
             }
