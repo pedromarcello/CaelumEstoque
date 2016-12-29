@@ -128,6 +128,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ContadorController.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="DAO\EstoqueContext.cs" />
     <Compile Include="DAO\ProdutosDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="Filtros\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
