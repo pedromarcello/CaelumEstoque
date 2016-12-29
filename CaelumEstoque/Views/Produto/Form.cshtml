@@ -1,5 +1,6 @@
 
     <form action="/Produto/Adiciona" method="post" >
+        @Html.AntiForgeryToken()
         @Html.ValidationMessage("produto.InformaticaComPrecoInvalido")
 
         <label for="nome">Nome:</label>
@@ -22,7 +23,7 @@
         <select id="categoria" name="produto.CategoriaId"class="form-control">
             @foreach (var categoria in ViewBag.Categorias)
             {
-                <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Categorias.CategoriaId)">
+                <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produto.CategoriaId)">
                     @categoria.Nome
                 </option>
             }
