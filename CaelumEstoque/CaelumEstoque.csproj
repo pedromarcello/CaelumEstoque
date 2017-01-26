@@ -99,9 +99,15 @@
       <DependentUpon>DBEstoque.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\Estilos.css" />
+    <Content Include="Content\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
+    <Content Include="Content\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
